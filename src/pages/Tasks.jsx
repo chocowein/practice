@@ -1,5 +1,4 @@
 import { useState, useEffect, useContext, createContext } from 'react'
-import {Link} from "react-router-dom"
 
 const StatusContext = createContext()
 
@@ -166,9 +165,6 @@ const Tasks = () => {
 
   return (
     <div>
-      <div>
-        <Link to="/status">ステータス一覧へ</Link>
-      </div>
       <StatusContext.Provider value={{statuses: statuses}}>
         <TaskForm
           task={newTask}
