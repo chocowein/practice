@@ -1,8 +1,12 @@
 import {useState, useEffect} from 'react'
+import {Link} from "react-router-dom"
 
 const StatusForm = (props) => {
   return (
     <>
+    <div>
+    <Link to="/task">タスク一覧へ</Link>
+    </div>
       <input name="name" value={props.status.name} onChange={props.changeHandler}/>
       <button onClick={props.clickHandler}>{props.buttonText}</button>
     </>
